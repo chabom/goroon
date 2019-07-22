@@ -116,12 +116,12 @@ func (c *Client) ScheduleGetEvents(params *Parameters) (*Returns, error) {
 	return res.Returns, nil
 }
 
-func (c *Client) BaseGetUserByLoginName(params *Parameters) (*Returns, error) {
-	req := &BaseGetUserByLoginNameRequest{
+func (c *Client) BaseGetUsersByLoginName(params *Parameters) (*Returns, error) {
+	req := &BaseGetUsersByLoginNameRequest{
 		Parameters: params,
 	}
-	res := &BaseGetUserByLoginNameResponse{}
-	if err := c.Request("BaseGetUserByLoginName", "/cbpapi/base/api", req, res); err != nil {
+	res := &BaseGetUsersByLoginNameResponse{}
+	if err := c.Request("BaseGetUsersByLoginName", "/cbpapi/base/api", req, res); err != nil {
 		return nil, err
 	}
 	return res.Returns, nil

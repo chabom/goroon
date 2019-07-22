@@ -186,13 +186,13 @@ type XmlDateTime struct {
 	time.Time
 }
 
-type BaseGetUserByLoginNameRequest struct {
+type BaseGetUsersByLoginNameRequest struct {
 	XMLName    xml.Name    `xml:"BaseGetUsersByLoginName"`
 	Parameters *Parameters `xml:"parameters"`
 }
 
-type BaseGetUserByLoginNameResponse struct {
-	XMLName xml.Name `xml:"BaseGetUserByLoginNameResponse"`
+type BaseGetUsersByLoginNameResponse struct {
+	XMLName xml.Name `xml:"BaseGetUsersByLoginNameResponse"`
 	Returns *Returns `xml:"returns"`
 }
 
