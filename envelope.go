@@ -61,14 +61,16 @@ type ScheduleGetEventsByTargetRequest struct {
 }
 
 type Parameters struct {
-	Start     XmlDateTime `xml:"start,attr,omitempty"`
-	End       XmlDateTime `xml:"end,attr,omitempty"`
-	User      User        `xml:"user,omitempty"`
-	LoginName []string    `xml:"login_name,omitempty"`
-	TopicId   int         `xml:"topic_id,attr"`
-	Offset    int         `xml:"offset,attr"`
-	Limit     int         `xml:"limit,attr"`
-	Password  string      `xml:"password"`
+	Start         XmlDateTime `xml:"start,attr,omitempty"`
+	End           XmlDateTime `xml:"end,attr,omitempty"`
+	StartForDaily XmlDate     `xml:"start_for_daily,attr,omitempty"`
+	EndForDaily   XmlDate     `xml:"end_for_daily,attr,omitempty"`
+	User          User        `xml:"user,omitempty"`
+	LoginName     []string    `xml:"login_name,omitempty"`
+	TopicId       int         `xml:"topic_id,attr"`
+	Offset        int         `xml:"offset,attr"`
+	Limit         int         `xml:"limit,attr"`
+	Password      string      `xml:"password"`
 }
 
 type ScheduleGetEventsByTargetResponse struct {
