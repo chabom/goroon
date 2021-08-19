@@ -107,6 +107,7 @@ type ScheduleEvent struct {
 	RepeatInfo  RepeatInfo `xml:"repeat_info"`
 	When        When       `xml:"when"`
 	Detail      string     `xml:"detail,attr"`
+	Plan        string     `xml:"plan,attr"`
 	Description string     `xml:"description,attr"`
 	Id          int        `xml:"id,attr"`
 	EventType   string     `xml:"event_type,attr"`
